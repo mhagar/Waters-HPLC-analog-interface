@@ -1,5 +1,7 @@
 # A Digital Chart-Recorder Interface for Use with Old Waters HPLCs
 
+![output](https://github.com/mhagar/Waters-HPLC-analog-interface/assets/68135547/6555e4eb-b123-482d-b88e-072b4e0dd0dd)
+
 We have an old Waters HPLC setup sitting around: a 515 pump connected to a 2487 dual wavelength detector. It still works great, but it's hooked up to an old [chart-recorder](https://faraday.physics.utoronto.ca/specs/goerz-se120.html). As in, *a device with a rolling drum of paper and electronically controlled pens*. I had a lot of fun using the chart recorder at first, but once the novelty wears off, it's quite cumbersome: so I put together an interface to generate chromatograms on a computer instead.
 
 This program is specifically designed to read from the [ADC-10-F103C](https://github.com/swharden/ADC-10-F103C), an inexpensive 10-channel ADC board with a USB adapter. You can get these for $5-$20 from eBay, Amazon, AliExpress, etc.
@@ -8,9 +10,10 @@ This program is specifically designed to read from the [ADC-10-F103C](https://gi
 
 ### Setting up the detector
 
-![[Connection_Diagram.svg]]
+![Connection_Diagram](https://github.com/mhagar/Waters-HPLC-analog-interface/assets/68135547/09a57546-59c6-42c6-adec-7227be4937f0)
 
-- Make the connections in the above diagram. For more information, see page 71 of the 2487 detector manual: *'Connecting the 2487 Detector to a Chart Recorder'*
+- Make the connections 
+in the above diagram. For more information, see page 71 of the 2487 detector manual: *'Connecting the 2487 Detector to a Chart Recorder'*
 	- *Note: you don't have to connect the red wires to specifically `IN8` and `IN1`, but if you do anything different, make sure to edit the `ACTIVE_CHANNELS` variable at the top of the script.*
 - Plug the device into a USB port and run the program
 
